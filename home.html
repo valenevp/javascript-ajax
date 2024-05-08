@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <title>Caso Prático - JavaScript</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link href="estilo.css" rel="stylesheet"> 
+
+
+  <script>
+
+    function carregar() {
+      var url = 'https://noticiasetecnologia.com/feed/?hl=pt-PT&#038;gl=PT&#038;ceid=PT%3Apt-150" rel="self" type="application/rss+xml"';
+
+    $.ajax({
+    
+    url:"https://api.rss2json.com/v1/api.json?rss_url=" + url,type: 'GET',success:
+    
+    function (data) {objeto_json = eval(data);
+                // ler o conteúdo
+    var frase = "";
+        for (i = 0; i < objeto_json.items.length; i++)
+    {
+        frase = frase + "Título: <b>" +
+        objeto_json.items[i].title + "</b><br/>";
+        frase = frase +
+        objeto_json.items[i].description + "<br/>";
+    }
+    $("#caixa").html(frase);
+    },
+    
+    error: function (xhr, status) {
+    alert('Ocorreu um erro.');
+    }
+    });
+    }
+  </script>
+
+
+</head>
+<body>
+
+<div class="container">
+  
+  <ul class="nav nav-pills">
+    <li class="active"><a href="home.html">Home</a></li>
+    <li><a href="galeria.html">Galeria</a></li>
+    <li><a href="servicos.html">Serviços</a></li>
+    <li><a href="contactos.html">Contactos</a></li>
+  </ul>
+
+</div>
+
+<br>
+
+<a href="#" onclick="carregar()">Clicar para ver as noiticias</a>
+    <div id="caixa">Noticias e Tecnologia</div>
+
+</body>
+</html>

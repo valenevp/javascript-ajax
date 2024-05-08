@@ -1,0 +1,191 @@
+body{
+	background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(51, 102, 255));
+	width: 100%;	
+}
+h2{
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #bfbfbf;
+}
+.d1, td{
+    font-size: 13px;
+    font-family: cursive;
+	padding: 5px;	
+}
+.box, p, .status{
+	font-size: 13px;
+    font-family: cursive;
+}
+h4{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.p1{
+    font-size: 15px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.p2{
+	font-size: 12px;
+    font-family: cursive;
+	margin-top: -15px;
+}
+.caixa1{
+	font-family: 'Dosis', arial;
+	font-size: 16px;
+	margin: 0 auto;
+	padding: 25px;
+	padding-bottom: 50px;
+	width: 500px;
+	border-radius: 11px 11px 11px 11px;
+	-moz-border-radius: 11px 11px 11px 11px;
+	-webkit-border-radius: 11px 11px 11px 11px;
+	border: 0px solid #000000;
+	color: #c0c5ce;
+	background-color:rgba(0,0,0,0.6);
+	text-align: left;
+}
+.botoes {
+	margin: 0 auto;
+	width: 260px;
+}
+.botao {
+	text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	color: #FFF;
+	background: #7F8C8D;
+	padding: 6px 30px;
+	white-space: nowrap;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	margin: 10px 2px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.cinza {
+	background: #343d46;
+	border: 0px solid #c0c5ce;
+	color: white;
+}
+.cinza:hover {
+	background: #008299;
+}
+h3{
+	font-size: 15px;
+    font-family: cursive;
+	color:#fff; 
+}
+.field{
+    width: 100%;
+    margin: 15px 0;
+}
+.field label, .field span{
+    padding-left: 10px;
+    font-size: 1.1em;
+    display: block;
+    width: 100%;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 15px;
+}
+textarea{
+    width: 50%;
+    padding-left: 10px;
+    height: 90px;
+    line-height: 30px;
+	color: #000;
+	font-size: 13px;
+    font-family: cursive;
+}
+.text{
+	margin-top: -5%;
+	
+}
+#mes{
+	color: #000;
+}
+#caixa{
+	color: #000;
+	font-size: 15px;
+    font-family: cursive;
+}
+#pagina{
+	width:150px;
+	padding:3px 3px;
+	font-size:12px;
+	color: #000;
+}
+#resultado{
+  width:200px;
+  height:25px;
+  font-size:13px;
+  background:#fff;  
+  text-align:center;  
+  color: #000;
+}
+.card_img{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    margin: 25px;
+}
+.small_img{
+    height: 100%;
+    cursor: pointer;
+    transition: all linear 0.4s;
+}
+.small_img:hover{
+    filter: grayscale(100%);
+    transform: scale(1.1);
+}
+.row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#modal_img{
+    width: 65vw;
+    transform: scale(0);
+    transition: all linear .3s;
+}
+.modal_active #modal_img{
+    transform: scale(1);
+}
+.modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    visibility: hidden;
+    z-index: 1;
+    opacity: 0;
+    transition: visibility 0.8s linear, opacity 0.5s linear;
+}
+.modal_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#bt_close{
+    color:#fff;
+    background-color: #000;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 25px;
+    border:solid 1px #fff;
+    transition: all ease-out .4s;
+    cursor: pointer;
+}
+#bt_close:hover{
+    background-color: #f00;
+}
+.modal_active{
+    visibility: visible;
+    opacity: 1;
+}

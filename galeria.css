@@ -1,0 +1,56 @@
+body{
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(51, 102, 255));
+}
+/* estilos para o modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* estilos para a imagem no modal */
+.modal img {
+    max-width: 80%;
+    max-height: 80%;
+    border: 2px solid white;
+    box-shadow: 0 0 10px #000;
+}
+/* estilos para o botão de fechar */
+.modal button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2em;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+img.clicked{
+    transform: scale(1.6);
+}
+.card_img{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    margin: 25px;
+}
+.small_img{
+    height: 100%;
+    cursor: pointer;
+    transition: all linear 0.4s;
+}
+.small_img:hover{
+    filter: grayscale(100%);
+    transform: scale(1.1);
+}
+.row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

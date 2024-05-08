@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <title>Caso Prático - JavaScript</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link href="estilo.css" rel="stylesheet"> 
+  <script src="validar.js"></script>
+
+
+</head>
+<body>
+
+<div class="container">
+  
+  <ul class="nav nav-pills">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="galeria.html">Galeria</a></li>
+    <li class="active"><a href="servicos.html">Serviços</a></li>
+    <li><a href="contactos.html">Contactos</a></li>
+  </ul>
+
+</div>
+
+<div class="caixa1" id="caixa1">
+      
+  <form action="formulario" method="post" id="formulario" name="formulario" onsubmit="return validar(this)">
+
+      <h2>Dados</h2>
+
+        <p class="d1">
+          Nome: <input type="text" name="nome"><br>
+          Apelido: <input type="text" name="apelido"><br>
+          Telemóvel: <input type="text" name="telemovel"><br>
+          E-mail: <input type="text" name="email"></p>            
+
+          <h2>Pedido de orçamento</h2>           
+                           
+        <p> Tipo de página web: 
+          <select id="pagina" onChange="update()">
+            <option label=" " id="branco" value="0">
+            <option id="facebook" value="1200"> Facebook, 1200€</option> 
+            <option id="instagram" value="1300"> Instagram, 1300€</option> 
+            <option id="site" value="1500"> Site, 1500€</option> 
+            <option id="twitter" value="1000"> Twitter, 1000€</option> 
+            <option id="youtube" value="1150"> Youtube, 1150€</option> 
+            <option id="linkedin" value="1100"> Linkedin, 1100€</option>
+              
+          </select>                   
+          
+          <br><br>
+                           
+          Prazo em meses: <input type="text"  name="prazo" id="mes" onChange="update()" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                                       
+        <h3>Marque os separadores desejados</h3>
+
+      <p class="box">
+
+        <input onclick="add(this)" type="checkbox"  class="check" name="quem" value="400"> Quem somos 
+        <input onclick="add(this)" type="checkbox"  class="check" name="onde" value="400"> Onde estamos
+          <br>
+        <input onclick="add(this)" type="checkbox"  class="check" name="fotografias" value="400"> Galeria de fotografias
+        <input onclick="add(this)" type="checkbox"  class="check" name="eCommerce" value="400"> eCommerce
+          <br>
+        <input onclick="add(this)" type="checkbox"  class="check" name="gestao" value="400"> Gestão interna
+        <input onclick="add(this)" type="checkbox"  class="check" name="notícias" value="400"> Notícias
+          <br>
+        <input onclick="add(this)" type="checkbox"  class="check" name="redes" value="400"> Redes sociais
+
+      </p>
+          
+        <br>
+      <p class="p1">Orçamento estimado</p>                
+      <p class="p2">(É um valor meramente indicativo, pode sofrer alterações)</p>
+        <input type="text" id="resultado" disabled="" onkeyup="calcular()">
+          
+  </form>
+
+  <br>
+
+  <div class="field">
+      <label for="mensagem">Sua mensagem:</label>
+      <textarea name="mensagem" id="mensagem" placeholder="" required></textarea>
+  </div>
+
+  <div>
+      
+    <p>Data: <input id="date" type="date" name="dia"></p>
+
+  </div>
+
+  <br>
+
+  <div class="botoes">
+    <input type="submit" name="Botao enviar" class="botao cinza" onclick="funcao()" value="ENVIAR">              
+    <input type="reset" name="Botao apagar" class="botao cinza" onclick="clearForm()" value="APAGAR">
+  </div>
+
+</div>
+
+
+</body>
+</html>

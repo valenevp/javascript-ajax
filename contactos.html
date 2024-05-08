@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <title>Caso Prático - JavaScript</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJ4UYojA3LduldgOlizCQJjjpNCjHkvn4&callback=myMap"></script>
+  
+  <link href="estilo.css" rel="stylesheet"> 
+  <script src="validar.js"></script>
+
+
+</head>
+
+<body onload="carregarmapa()">
+
+<div class="container">
+  
+  <ul class="nav nav-pills">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="galeria.html">Galeria</a></li>
+    <li><a href="servicos.html">Serviços</a></li>
+    <li class="active"><a href="contactos.html">Contactos</a></li>
+  </ul>
+
+</div>
+
+<div class="dropdown-content">
+            
+  <input type="text" id="direccao"  value="Porto">
+  <input type="button" value="Geolocalizar" onclick="geo()">
+  <div id="mapa" style="width:300px; height:175px"></div>
+
+</div>
+
+
+</body>
+</html>
